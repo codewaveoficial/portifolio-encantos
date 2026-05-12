@@ -5,98 +5,125 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Encantos na Mesa - Portfólio</title>
   <link rel="stylesheet" href="assets/css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500;700&family=Sour+Gummy&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
   <header id="home">
     <nav class="navbar">
-      <a href="#home" class="brand">
-        <img src="assets/img/logo.png" alt="Encantos na Mesa Logo">
-        <span>Encantos na Mesa</span>
+      <a href="#home" class="brand" aria-label="Encantos na Mesa - Decoração de mesa e festas">
+        <img src="assets/img/logo.png" alt="Logo Encantos na Mesa">
+        <div>
+          <span class="brand-title">Encantos na Mesa</span>
+          <span class="brand-subtitle">Decoração de mesa e festas</span>
+        </div>
       </a>
-      <ul>
-        <li><a href="#home">Início</a></li>
-        <li><a href="#galeria">Galeria de Festas</a></li>
-        <li><a href="#monte">Pegue e Monte</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#informacoes">Informações</a></li>
-        <li><a href="#contato">Contato</a></li>
+
+      <ul role="navigation">
+        <li><a href="#home" aria-label="Ir para seção Início">Início</a></li>
+        <li><a href="#sobre" aria-label="Ir para seção Sobre">Sobre</a></li>
+        <li><a href="#galeria" aria-label="Ir para seção Galeria">Galeria</a></li>
+        <li><a href="#monte" aria-label="Ir para seção Pegue e Monte">Pegue e Monte</a></li>
+        <li><a href="#informacoes" aria-label="Ir para seção Informações">Informações</a></li>
+        <li><a href="#contato" aria-label="Ir para seção Contato">Contato</a></li>
       </ul>
-      <button class="mobile-menu" aria-label="Abrir menu">☰</button>
-      <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">🌙</button>
+
+      <div class="navbar-actions">
+        <button class="mobile-menu" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="navbar-menu">
+          <span>☰</span>
+        </button>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Alternar entre tema claro e escuro" title="Pressione para alternar tema">🌙</button>
+      </div>
     </nav>
 
     <div class="hero">
-      <img src="assets/img/logo.png" alt="Encantos na Mesa" class="hero-logo">
-      <p>Monte sua festa dos sonhos com nossos kits exclusivos e inspire-se em nossa galeria de celebrações encantadoras.</p>
-      <a href="#monte" class="btn">Pegue e Monte Agora</a>
+      <div class="hero-copy">
+        <span class="eyebrow">Festa na mesa</span>
+        <h1>Decorações que brilham em cada detalhe</h1>
+        <p>Transformamos cada celebração em um convite à emoção com mesas elegantes, paleta dourada e kits feitos sob medida.</p>
+        <div class="hero-actions">
+          <a href="#monte" class="btn">Montar meu kit</a>
+          <a href="#galeria" class="btn btn-secondary">Ver galeria</a>
+        </div>
+        <div class="hero-highlights">
+          <div><i class="fas fa-gift"></i> Kits premium</div>
+          <div><i class="fas fa-star"></i> Decoração exclusiva</div>
+          <div><i class="fas fa-heart"></i> Entrega cuidadosa</div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="assets/img/logo.png" alt="Encantos na Mesa" class="hero-logo">
+      </div>
     </div>
   </header>
+<main>
 
   <section id="sobre">
-    <h2>Quem Somos</h2>
-    <p>A Encantos na Mesa é especialista em criar experiências incomparáveis com decoração temática, mesas encantadoras e serviços exclusivos para todos os tipos de festa. De aniversários íntimos a grandes eventos corporativos, cada projeto nasce da nossa paixão por detalhes e alegria.</p>
+    <div class="section-header">
+      <span class="section-label">Quem Somos</span>
+      <h2>Encantos na Mesa cria celebrações memoráveis</h2>
+    </div>
+    <p>A Encantos na Mesa transforma cada evento em um cenário mágico. Trabalhamos com decoração de mesa, kits exclusivos e montagem cuidadosa para que sua festa brilhe do começo ao fim.</p>
+    <div class="feature-grid">
+      <article class="feature-card">
+        <h3>Design temático</h3>
+        <p>Mesas personalizadas com paletas de cores, texturas e elementos decorativos que encantam.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Montagem premium</h3>
+        <p>Equipe dedicada garante montagem rápida, organizada e com acabamento impecável.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Experiência única</h3>
+        <p>Atendimento carinhoso, entrega pontual e festividades criadas para emocionar cada convidado.</p>
+      </article>
+    </div>
   </section>
 
   <section id="galeria">
-    <h2>Galeria de Festas</h2>
-    <p class="subtitle">Inspire-se com nossas criações encantadoras para cada tipo de celebração</p>
+    <h2>Galeria de Kits</h2>
+    <p class="subtitle">Inspire-se com nossos kits encantadores para cada tipo de celebração</p>
     <div class="galeria-grid">
-      <div class="galeria-item">
-        <img src="https://dummyimage.com/300x200/FF69B4/FFFFFF&text=Aniversario+Infantil" alt="Aniversário Infantil">
+      <div class="galeria-item" data-kit="essencial">
+        <img src="assets/img/kit essencial/essencial1.jpeg" alt="Kit Essencial">
         <div class="overlay">
-          <h3>Aniversários Infantis</h3>
-          <p>Temas divertidos e mesas de guloseimas.</p>
+          <h3>Kit Essencial</h3>
+          <p>Painel com tema, cacho de bola, boleira, 3 bandeijas, 1 jarro com flor e display.</p>
         </div>
       </div>
-      <div class="galeria-item">
-        <img src="https://dummyimage.com/300x200/87CEFA/FFFFFF&text=Casamento" alt="Casamento">
+      <div class="galeria-item" data-kit="especial">
+        <img src="assets/img/kit especial/especial 1.jpeg" alt="Kit Especial">
         <div class="overlay">
-          <h3>Casamentos</h3>
-          <p>Elegância e romantismo em cada detalhe.</p>
+          <h3>Kit Especial</h3>
+          <p>Painel com tema, cacho de bola, boleira, 3 bandeijas, 1 jarro com flor, display, mesa, escadinha e tapete.</p>
         </div>
       </div>
-      <div class="galeria-item">
-        <img src="https://dummyimage.com/300x200/FFD700/FFFFFF&text=Cha+de+Bebe" alt="Chá de Bebê">
+      <div class="galeria-item" data-kit="supremo">
+        <img src="assets/img/kit supremo/kit supremo.jpeg" alt="Kit Supremo">
         <div class="overlay">
-          <h3>Chá de Bebê</h3>
-          <p>Decorações suaves para novas vidas.</p>
+          <h3>Kit Supremo</h3>
+          <p>Painel com tema, cacho de bola, boleira, 3 bandeijas, 1 jarro com flor, display, mesa, escadinha, tapete, número de mesa em display e guirlanda de balões.</p>
         </div>
       </div>
-      <div class="galeria-item">
-        <img src="https://dummyimage.com/300x200/FF69B4/FFFFFF&text=Cha+Revelacao" alt="Chá Revelação">
+      <div class="galeria-item" data-kit="personalizado">
+        <img src="assets/img/festa personalizada/personalizada 1.jpeg" alt="Kit Personalizado">
         <div class="overlay">
-          <h3>Chá Revelação</h3>
-          <p>Surpresas criativas para revelar o gênero.</p>
+          <h3>Festa Personalizada</h3>
+          <p>Conceito único, decoração sob medida, mesa personalizada.</p>
         </div>
       </div>
-      <div class="galeria-item">
-        <img src="https://dummyimage.com/300x200/87CEFA/FFFFFF&text=Corporativo" alt="Evento Corporativo">
+      <div class="galeria-item" data-kit="guirlanda">
+        <img src="https://dummyimage.com/300x200/FFD700/FFFFFF&text=Guirlanda+Baloes" alt="Guirlanda Balões">
         <div class="overlay">
-          <h3>Eventos Corporativos</h3>
-          <p>Profissionalismo com identidade visual.</p>
+          <h3>Guirlanda Balões Delivery</h3>
+          <p>Guirlanda decorativa com balões Delivery ou montagem no local da festa.</p>
         </div>
       </div>
-      <div class="galeria-item">
-        <img src="https://dummyimage.com/300x200/FFD700/FFFFFF&text=Formatura" alt="Formatura">
+      <div class="galeria-item" data-kit="ornamentacao">
+        <img src="https://dummyimage.com/300x200/ffbf00/ffffff&text=Ornamenta%C3%A7%C3%A3o+de+Lojas" alt="Ornamentação de Lojas">
         <div class="overlay">
-          <h3>Formaturas</h3>
-          <p>Glamour e emoção para conquistas.</p>
-        </div>
-      </div>
-      <div class="galeria-item">
-        <img src="https://dummyimage.com/300x200/FF69B4/FFFFFF&text=Ceia+Tematica" alt="Ceia Temática">
-        <div class="overlay">
-          <h3>Ceias Temáticas</h3>
-          <p>Mesas especiais para datas comemorativas.</p>
-        </div>
-      </div>
-      <div class="galeria-item">
-        <img src="https://dummyimage.com/300x200/87CEFA/FFFFFF&text=Personalizada" alt="Festa Personalizada">
-        <div class="overlay">
-          <h3>Festas Personalizadas</h3>
-          <p>Conceitos únicos para sonhos únicos.</p>
+          <h3>Ornamentação de Lojas</h3>
+          <p>Decoração especial para lojas, vitrines e espaços comerciais com identidade visual elegante.</p>
         </div>
       </div>
     </div>
@@ -106,40 +133,77 @@
     <h2>Pegue e Monte Sua Festa</h2>
     <p class="subtitle">Escolha o kit ideal e personalize com nossos serviços adicionais</p>
     <div class="kits-grid">
-      <div class="kit-card" data-kit="essencial" data-price="500">
+      <div class="kit-card" data-kit="essencial" data-price="75">
         <img src="https://dummyimage.com/150x100/FF69B4/FFFFFF&text=Kit+Essencial" alt="Kit Essencial">
         <h3>Kit Essencial</h3>
         <p>Decoração básica, mesa simples e 1 serviço adicional. Perfeito para eventos íntimos.</p>
-        <span class="price">R$ 500</span>
+        <span class="price">R$ 75</span>
         <button class="select-kit">Selecionar</button>
       </div>
-      <div class="kit-card" data-kit="especial" data-price="800">
+      <div class="kit-card" data-kit="especial" data-price="175">
         <img src="https://dummyimage.com/150x100/FFD700/FFFFFF&text=Kit+Especial" alt="Kit Especial">
         <h3>Kit Especial</h3>
         <p>Decoração intermediária, mesa elegante e 2 serviços adicionais. Ideal para celebrações médias.</p>
-        <span class="price">R$ 800</span>
+        <span class="price">R$ 175</span>
         <button class="select-kit">Selecionar</button>
       </div>
-      <div class="kit-card" data-kit="supremo" data-price="1200">
+      <div class="kit-card" data-kit="supremo" data-price="250">
         <img src="https://dummyimage.com/150x100/87CEFA/FFFFFF&text=Kit+Supremo" alt="Kit Supremo">
         <h3>Kit Supremo</h3>
         <p>Decoração premium, mesa luxo e 3 serviços adicionais. Para eventos grandiosos e memoráveis.</p>
-        <span class="price">R$ 1.200</span>
+        <span class="price">R$ 350</span>
         <button class="select-kit">Selecionar</button>
       </div>
-      <div class="kit-card" data-kit="personalizado" data-price="1500">
+      <div class="kit-card" data-kit="personalizado" data-price="300">
         <img src="https://dummyimage.com/150x100/FF69B4/FFFFFF&text=Kit+Personalizado" alt="Kit Personalizado">
-        <h3>Kit Personalizado</h3>
+        <h3>Festa Personalizada</h3>
         <p>Conceito único, decoração sob medida, mesa personalizada e serviços à escolha. Seu sonho realizado.</p>
-        <span class="price">R$ 1.500+</span>
+        <span class="price">A partir de R$ 250</span>
         <button class="select-kit">Selecionar</button>
       </div>
-      <div class="kit-card" data-kit="guirlanda" data-price="200">
-        <img src="https://dummyimage.com/150x100/FFD700/FFFFFF&text=Guirlanda+Baloes" alt="Guirlanda Balões">
+      <div class="kit-card" data-kit="ornamentacao" data-price="220">
+         <img src="https://dummyimage.com/300x200/ffbf00/ffffff&text=Ornamenta%C3%A7%C3%A3o+de+Lojas" alt="Ornamentação de Lojas">
+        <h3>Ornamentação de Lojas</h3>
+        <p>Decoração temática para vitrines e lojas, ideal para datas festivas e campanhas especiais.</p>
+        <span class="price">Preço a combinar</span>
+        <button class="select-kit">Selecionar</button>
+      </div>
+      <div class="kit-card" data-kit="guirlanda" data-price="120">
+         <img src="https://dummyimage.com/300x200/FFD700/FFFFFF&text=Guirlanda+Baloes" alt="Guirlanda Balões">
         <h3>Guirlanda Balões Delivery</h3>
         <p>Guirlanda decorativa com balões, entrega rápida. Perfeita para surpresas ou decorações rápidas.</p>
-        <span class="price">R$ 200</span>
+        <span class="price">a partir de R$ 120</span>
         <button class="select-kit">Selecionar</button>
+      </div>
+    </div>
+    <div class="add-ons">
+      <h3>Adicionais</h3>
+      <div class="add-ons-grid">
+        <label class="add-on">
+          <img src="https://dummyimage.com/50x50/FF69B4/FFFFFF&text=Foto" alt="Fotografia">
+          <span>Número LED de mesa (R$ 15)</span>
+          <input type="checkbox" value="15" data-service="LED">
+        </label>
+        <label class="add-on">
+          <img src="https://dummyimage.com/50x50/87CEFA/FFFFFF&text=Musica" alt="Música">
+          <span>Mesa (R$ 50)</span>
+          <input type="checkbox" value="50" data-service="Mesa">
+        </label>
+        <label class="add-on">
+          <img src="https://dummyimage.com/50x50/FFD700/FFFFFF&text=Animacao" alt="Animação">
+          <span>Número balão de mesa (R$ 50)</span>
+          <input type="checkbox" value="50" data-service="Número balão">
+        </label>
+        <label class="add-on">
+          <img src="https://dummyimage.com/50x50/FF69B4/FFFFFF&text=Transporte" alt="Transporte">
+          <span>Escadinha (R$ 30)</span>
+          <input type="checkbox" value="30" data-service="Escadinha">
+        </label>
+        <label class="add-on">
+          <img src="https://dummyimage.com/50x50/FF69B4/FFFFFF&text=Transporte" alt="Transporte">
+          <span>Display (R$ 10)</span>
+          <input type="checkbox" value="10" data-service="Display">
+        </label>
       </div>
     </div>
     <div class="add-ons">
@@ -147,24 +211,15 @@
       <div class="add-ons-grid">
         <label class="add-on">
           <img src="https://dummyimage.com/50x50/FF69B4/FFFFFF&text=Foto" alt="Fotografia">
-          <span>Fotografia (R$ 100)</span>
-          <input type="checkbox" value="100" data-service="Fotografia">
+          <span>Música (R$ 50)</span>
+          <input type="checkbox" value="50" data-service="Música">
         </label>
         <label class="add-on">
           <img src="https://dummyimage.com/50x50/87CEFA/FFFFFF&text=Musica" alt="Música">
-          <span>Música (R$ 150)</span>
-          <input type="checkbox" value="150" data-service="Música">
+          <span>convite digital simples (R$ 50)</span>
+          <input type="checkbox" value="50" data-service="Convite">
         </label>
-        <label class="add-on">
-          <img src="https://dummyimage.com/50x50/FFD700/FFFFFF&text=Animacao" alt="Animação">
-          <span>Animação (R$ 200)</span>
-          <input type="checkbox" value="200" data-service="Animação">
-        </label>
-        <label class="add-on">
-          <img src="https://dummyimage.com/50x50/FF69B4/FFFFFF&text=Transporte" alt="Transporte">
-          <span>Transporte (R$ 250)</span>
-          <input type="checkbox" value="250" data-service="Transporte">
-        </label>
+    
       </div>
     </div>
     <div class="resumo">
@@ -182,19 +237,19 @@
     <div class="info-grid">
       <div class="info-item">
         <h3>Formas de Pagamento</h3>
-        <p>Aceitamos PIX, cartão de crédito/débito, transferência bancária e dinheiro em espécie. Pagamento à vista tem 5% de desconto.</p>
+        <p>Aceitamos PIX, cartão de crédito/débito, transferência bancária e dinheiro.</p>
       </div>
       <div class="info-item">
         <h3>Conservação do Kit</h3>
-        <p>Os kits devem ser armazenados em local seco e arejado. Evite exposição direta ao sol e umidade para preservar a qualidade dos materiais.</p>
+        <p>Orientamos que os kits não sejam expostos a chuva, umidade ou locais molhados. Em caso de extravio ou avaria de uma peça, será cobrado do cliente o valor correspondente ao item.</p>
       </div>
       <div class="info-item">
         <h3>Reserva de datas</h3>
-        <p>O kit fica reservado a partir do pagamento de 50% do valor. A retirada pode ser feita de segunda a sábado.</p>
+        <p>O kit fica reservado a partir do pagamento de 50% do valor.</p>
       </div>
       <div class="info-item">
-        <h3>Prazo para Entrega</h3>
-        <p>Entregas em até 24 horas úteis. Para outras regiões, consulte prazo específico por localidade.</p>
+        <h3>Entrega e retirada</h3>
+        <p>Retirada: Segunda a sexta-feira das 08h as 18h | Finais de semana 08 às 12h (sujeito a alterações). Devolução: Em até 24 horas após o evento.</p>
       </div>
     </div>
   </section>
@@ -204,12 +259,22 @@
     <p>Quer transformar sua celebração em um espetáculo? Fale conosco!</p>
     <a href="mailto:contato@encantosnamesa.com" class="btn">Entrar em Contato</a>
   </section>
+</main>
 
   <footer>
     <p>&copy; 2026 Encantos na Mesa. Todos os direitos reservados.</p>
     <p>Feito com carinho e criatividade ✨</p>
-    <a href="#" id="scrollTop">Voltar ao topo</a>
   </footer>
+  <div id="galeria-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="fullscreen-image-container">
+        <img id="fullscreen-image" src="" alt="">
+        <button class="prev-btn">&lt;</button>
+        <button class="next-btn">&gt;</button>
+      </div>
+    </div>
+  </div>
 
   <script src="assets/js/script.js"></script>
 </body>
